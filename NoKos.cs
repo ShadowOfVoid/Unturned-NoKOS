@@ -28,9 +28,9 @@ namespace Wth.NoKos
             Instance = this;
             Logger.Log("Loading NoKos v." + VERSION);
 
-            if (AdvancedZones.Instance == null)
+            if (!IsDependencyLoaded("AdvancedZones"))
             {
-                Logger.LogError("You need AdvancedZone Plugin in order to this plugin to work !");
+                Logger.LogError("You need AdvancedZones Plugin in order to this plugin to work!");
                 return;
             }
 
